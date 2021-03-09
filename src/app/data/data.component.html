@@ -1,1 +1,8 @@
-<p>data works!</p>
+<h2>Datapoints</h2>
+<ul class="datapoints">
+  <li *ngFor="let datapoint of datapoints"
+    [class.selected]="datapoint === selectedDatapoint"
+    (click)="onSelect(datapoint)">
+    {{datapoint.name}}
+  </li>
+</ul>
